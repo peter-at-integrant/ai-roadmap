@@ -20,17 +20,17 @@ Before execution can begin:
 
 Configure a root repository structure that allows AI tools to access and coordinate changes across all team repositories simultaneously, enabling cross-cutting feature implementation in a single session.
 
-The workspace structure is **tool-agnostic** — it uses Git submodules and a VS Code multi-root workspace file (`.code-workspace`), which any AI tool supporting multi-root context can consume. Tool-specific configuration files are provided for **Cursor** and **Claude Code** as reference implementations; they are not the only supported tools.
+The workspace structure is **tool-agnostic** — it uses [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) and a VS Code multi-root workspace file ([`.code-workspace`](https://code.visualstudio.com/docs/editing/workspaces/workspaces#_multiroot-workspaces)), which any AI tool supporting multi-root context can consume. Tool-specific configuration files are provided for **[Cursor](https://www.cursor.com)** and **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** as reference implementations; they are not the only supported tools.
 
-> **Dependency — Goal 2:** Goal 1 configures the workspace to automatically consume `AGENTS.md` files once they exist (via Cursor context includes and Claude Code's `CLAUDE.md`). The creation and governance of `AGENTS.md` content is owned by Goal 2. These two goals must be sequenced accordingly.
+> **Dependency — Goal 2:** Goal 1 configures the workspace to automatically consume `AGENTS.md` files once they exist (via [Cursor](https://www.cursor.com) context includes and [Claude Code](https://docs.anthropic.com/en/docs/claude-code)'s `CLAUDE.md`). The creation and governance of `AGENTS.md` content is owned by Goal 2. These two goals must be sequenced accordingly.
 
-> **Scope boundary — Goal 5:** MCP server configuration is **out of scope** for Goal 1. It is addressed in Goal 5 (Business Documentation Automation via MCPs).
+> **Scope boundary — Goal 5:** [MCP](https://modelcontextprotocol.io) server configuration is **out of scope** for Goal 1. It is addressed in Goal 5 (Business Documentation Automation via MCPs).
 
 ---
 
 ## SMART Breakdown
 
-- **Specific:** Set up a root repository using **Git submodules** as the primary linking mechanism for all 10 team repositories, combined with a VS Code multi-root workspace file (`.code-workspace`). Configure tool-specific AI context files for Cursor and Claude Code as reference implementations. The workspace pattern is designed to work with any AI tool that supports multi-root context.
+- **Specific:** Set up a root repository using **[Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)** as the primary linking mechanism for all 10 team repositories, combined with a VS Code multi-root workspace file ([`.code-workspace`](https://code.visualstudio.com/docs/editing/workspaces/workspaces#_multiroot-workspaces)). Configure tool-specific AI context files for [Cursor](https://www.cursor.com) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code) as reference implementations. The workspace pattern is designed to work with any AI tool that supports multi-root context.
 - **Measurable:** An AI tool can successfully read files from and propose changes across **all 10 team repositories** in a single session without manual context switching.
 - **Achievable:** Uses existing repo structure; requires only configuration files and workspace setup — no new infrastructure. Repository access provisioning by DevOps is a prerequisite (see above).
 - **Relevant:** Eliminates manual context switching between repos for cross-cutting features, reducing developer handoff delays. Establishes the foundational workspace structure required by every subsequent Phase 0 goal.
@@ -41,13 +41,13 @@ The workspace structure is **tool-agnostic** — it uses Git submodules and a VS
 ## Deliverables
 
 - [ ] Root repository created and accessible to all team members
-- [ ] All 10 team repositories linked as Git submodules under `services/`
-- [ ] VS Code multi-root workspace file (`.code-workspace`) committed to root repo
-- [ ] Claude Code `CLAUDE.md` context file committed to root repo (reference implementation)
-- [ ] Cursor `.cursor/settings.json` context file committed to root repo (reference implementation)
+- [ ] All 10 team repositories linked as [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) under `services/`
+- [ ] VS Code multi-root workspace file ([`.code-workspace`](https://code.visualstudio.com/docs/editing/workspaces/workspaces#_multiroot-workspaces)) committed to root repo
+- [ ] [Claude Code](https://docs.anthropic.com/en/docs/claude-code) `CLAUDE.md` context file committed to root repo (reference implementation)
+- [ ] [Cursor](https://www.cursor.com) `.cursor/settings.json` context file committed to root repo (reference implementation)
 - [ ] Validated: AI tool reads and proposes changes across all 10 repos in a single session
 - [ ] Developer setup guide (`docs/workspace-guide.md`) committed and peer-reviewed
-- [ ] **Out of scope — noted:** MCP server configuration → addressed in Goal 5
+- [ ] **Out of scope — noted:** [MCP](https://modelcontextprotocol.io) server configuration → addressed in Goal 5
 - [ ] **Out of scope — noted:** AGENTS.md content → addressed in Goal 2; workspace is pre-wired to consume it
 
 ---
@@ -56,7 +56,7 @@ The workspace structure is **tool-agnostic** — it uses Git submodules and a VS
 
 - A developer can open the root workspace in any AI tool that supports multi-root context and navigate to any of the 10 linked repositories without leaving the session.
 - An AI tool can read files from and propose changes to **all 10 team repositories** in a single session.
-- Tool-specific configuration files for Cursor and Claude Code are present, functional, and serve as reference implementations for onboarding other tools.
+- Tool-specific configuration files for [Cursor](https://www.cursor.com) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code) are present, functional, and serve as reference implementations for onboarding other tools.
 - Developer setup guide is present and reviewed by at least one other team member.
 - All repository access permissions are confirmed working for all team members before sign-off.
 
@@ -67,7 +67,7 @@ The workspace structure is **tool-agnostic** — it uses Git submodules and a VS
 By the end of this goal, you should be able to:
 
 - Explain what a Git submodule is and why it's used instead of copying repo content
-- Explain what `.code-workspace`, `CLAUDE.md`, and `.cursor/settings.json` each do and why they're separate
+- Explain what [`.code-workspace`](https://code.visualstudio.com/docs/editing/workspaces/workspaces#_multiroot-workspaces), `CLAUDE.md`, and `.cursor/settings.json` each do and why they're separate
 - Explain why multi-root context matters for AI tools working across repos
 - Set up the workspace structure from scratch without AI generating the config files
 
@@ -79,5 +79,5 @@ Answer the following questions **in your own words** without AI assistance. Revi
 
 1. What problem does a multi-repo root setup solve that simply opening each repo separately doesn't?
 2. What is a Git submodule? How does it differ from copying the code into a subfolder?
-3. If a new AI tool joins the team that isn't Cursor or Claude Code, what would you need to add to support it?
-4. What would break if you deleted the `.code-workspace` file? What if you deleted `CLAUDE.md`?
+3. If a new AI tool joins the team that isn't [Cursor](https://www.cursor.com) or [Claude Code](https://docs.anthropic.com/en/docs/claude-code), what would you need to add to support it?
+4. What would break if you deleted the [`.code-workspace`](https://code.visualstudio.com/docs/editing/workspaces/workspaces#_multiroot-workspaces) file? What if you deleted `CLAUDE.md`?
