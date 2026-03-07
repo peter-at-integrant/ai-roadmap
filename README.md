@@ -3,11 +3,9 @@
 **Created:** 2026-03-04
 **Status:** Draft — Phase 0 complete; Phases 1–3 in progress
 **Source:** [integrant-roadmap.md](./integrant-roadmap.md)
-**Demo Project:** [Agency — Band & Venue Booking Platform](./agency-project-brief.md)
-
 This repo tracks a structured, self-development programme for adopting AI across the full software development lifecycle. It documents 16 SMART goals across 4 progressive phases, with implementation plans, alignment discussions, and a live progress tracker.
 
-The goals are demonstrated against the [Agency workspace](https://github.com/peter-at-integrant/agency-workspace) — a multi-repo band & venue booking platform.
+The goals are demonstrated against the [Agency workspace](https://github.com/peter-at-integrant/agency-workspace) — a multi-repo band & venue booking platform ([project brief](https://github.com/peter-at-integrant/agency-workspace/blob/main/agency-project-brief.md)).
 
 **Progress:** [Implementation Progress](./progress.md)
 **Achievements:** [What was built + how to use it](./achievements.md)
