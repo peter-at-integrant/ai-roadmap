@@ -33,3 +33,24 @@ Build at least one autonomous agent per team using an orchestration framework (L
 - Agent executes a defined multi-step SDLC workflow with no human intervention in 85% of runs.
 - Cost per run is documented and does not exceed the team-agreed budget threshold.
 - Agent is in active production use, not just a demo.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Understand how agent orchestration frameworks (LangChain, CrewAI, AutoGen) work
+- Design a multi-step agent with defined tools and a clear stop condition
+- Trace an agent's execution log and identify where it failed
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. What is an "agent" in the LangChain/AutoGen sense? How does it differ from a single LLM call?
+2. What does "multi-step" mean in an agent context? Give an example from the SDLC.
+3. How do you prevent an agent from making destructive changes (e.g., deleting branches, force-pushing)?
+4. What frameworks did you evaluate, and why did you choose the one you did?

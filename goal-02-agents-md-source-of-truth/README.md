@@ -29,3 +29,24 @@ Create and maintain an `AGENTS.md` file at the root of each repository that docu
 - Every repository has an `AGENTS.md` that covers: project purpose, tech stack, coding standards, key architecture decisions, and links to further docs.
 - Team members report that AI tools produce on-standard output without needing extra context prompts.
 - File is tool-agnostic — works with Cursor, Claude Code, and any other AI tool the team uses.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Explain the difference between `AGENTS.md`, `CLAUDE.md`, and `.cursorrules` — and when each is used
+- Know what belongs in `AGENTS.md` and what doesn't
+- Write an `AGENTS.md` for a new project without AI assistance
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. What's the difference between `AGENTS.md`, `CLAUDE.md`, and `.cursorrules`? When would you use each?
+2. What should be in `AGENTS.md` and what should NOT be in it?
+3. How does `AGENTS.md` help reduce token consumption across sessions?
+4. A junior developer asks: "Why do we need AGENTS.md when we can just include the context in the prompt?" How do you respond?

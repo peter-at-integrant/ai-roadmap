@@ -30,3 +30,24 @@ Configure MCP (Model Context Protocol) servers that automatically generate and u
 - A developer merges a PR and a documentation artifact is auto-generated and attached without any manual steps.
 - The pipeline blocks merges where the documentation gate fails.
 - Generated documentation meets the quality bar defined by the team (reviewed by TPL).
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Explain what an MCP server is and how it exposes tools to AI tools
+- Understand the structure of a tool definition in the MCP SDK (name, description, input schema, handler)
+- Be able to add a new tool to the doc server
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. What is an MCP server? How does it differ from writing a skill file?
+2. Walk through how `generate_release_notes` works — what inputs, what logic, what output?
+3. Why is the doc automation in CI (GitHub Actions artifact gate) rather than run manually?
+4. If you wanted to add a `generate_api_changelog` tool, what would you need to write?

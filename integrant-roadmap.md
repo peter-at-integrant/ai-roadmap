@@ -18,6 +18,11 @@ This plan outlines a comprehensive AI adoption strategy for Agency, focusing on 
 
 Automate the entire Software Development Lifecycle using AI tools in a generic, tool-agnostic way.
 
+> **On timelines:** The "Target: Week X" deadlines represent when the team member should have
+> completed learning and passed the self-assessment for that goal — not when the artefacts were
+> built. AI compresses implementation time to hours; the week budget is for guided exploration,
+> experimentation, pair-prompting with AI, and demonstrating understanding to the EM/TL.
+
 ### Process Flow
 
 | Step | Description |

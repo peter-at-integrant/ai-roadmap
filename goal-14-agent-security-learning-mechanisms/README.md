@@ -33,3 +33,24 @@ Define and implement security controls for all agent deployments — covering pr
 - Red team exercise conducted and all critical/high findings remediated by end of Month 8.
 - At least one agent demonstrates a measurable improvement in task success rate after 4 weeks of feedback loop operation.
 - Security standard and feedback loop design are published to the team KB.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Explain prompt injection defence mechanisms at the agent level
+- Know what sandboxing an agent means and what it prevents
+- Design a basic feedback loop for an agent to improve from past runs
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. What is prompt injection in an agent context? How do you defend against it?
+2. What does "sandboxing" an agent mean, and what does it prevent?
+3. How would you design a feedback loop so an agent learns from failed or corrected outputs?
+4. What access controls should an agent that creates and merges PRs have?

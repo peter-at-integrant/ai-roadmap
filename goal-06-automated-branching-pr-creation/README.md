@@ -31,3 +31,24 @@ Implement an AI-assisted workflow that automatically creates branches following 
 - Developer triggers the workflow with a work item reference; a correctly named branch is created and a fully populated PR is opened automatically.
 - 90% of generated PRs pass the team's PR checklist without manual edits.
 - Workflow works across all team repositories.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Know the team's branch naming convention and the reason for it
+- Trace what `branch-and-pr.sh` does at each step
+- Understand how the GitHub API is used for branch and PR creation
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. What branch naming convention does the team use? Give an example for a feature, a fix, and a chore.
+2. Walk through what `branch-and-pr.sh` does, step by step.
+3. Why automate PR creation rather than using the GitHub UI?
+4. If the PR description template changes, what file do you update and where does it live?

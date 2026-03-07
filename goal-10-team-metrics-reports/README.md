@@ -33,3 +33,24 @@ Close the visibility gap in Phase 0 by automating the collection and reporting o
 - A GitHub issue labelled `metrics` is created automatically linking to the report file.
 - The script handles API rate limits gracefully (exponential back-off, exits with non-zero on failure).
 - All GitHub tokens are stored in GitHub Secrets — not in script files or workflow YAML literals.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Know the 5 metrics tracked and the rationale for choosing each
+- Understand how they're collected via the GitHub API
+- Be able to interpret the weekly report and identify what actions each metric should trigger
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. What are the metrics tracked in the weekly report, and why was each one chosen?
+2. What does "PR cycle time" mean? What's a healthy vs unhealthy value, and what causes it to spike?
+3. How is the report generated and where does it get published?
+4. The CI pass rate drops to 60% this week. What does that signal, and what action do you take?

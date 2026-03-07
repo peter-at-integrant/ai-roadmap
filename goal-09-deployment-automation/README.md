@@ -32,3 +32,24 @@ Close the SDLC loop by automating deployment for all three Agency repos. Every m
 - Staging environment reflects the merged change within 5 minutes of merge.
 - Failed deployments block future merges until resolved (branch protection rule active).
 - All secrets are in GitHub Secrets — no credentials in code, workflow YAML, or `.env` files committed.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Trace the deployment pipeline for each of the 3 repos end to end
+- Understand how secrets are stored and referenced in GitHub Actions
+- Know how to diagnose a failed deployment step
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. Walk through the deployment pipeline for `agency-gig-api` — what happens at each step?
+2. What's the difference between CI (continuous integration) and CD (continuous deployment)?
+3. How are secrets (tokens, credentials) stored and used in the GitHub Actions workflows?
+4. A deployment to GHCR fails. Where do you look first, and what are the likely causes?

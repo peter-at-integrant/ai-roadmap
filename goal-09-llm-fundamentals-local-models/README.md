@@ -30,3 +30,24 @@ Build foundational understanding of how LLMs work, how they differ from agents, 
 - Every engineer has run at least 2 open-source models locally.
 - Every engineer has a working RAG or CAG prototype submitted to the KB.
 - Team can articulate the difference between an LLM, an agent, RAG, and CAG — verified in the debrief session.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Explain the difference between an LLM and an AI agent
+- Run a local model with Ollama and compare its output to a cloud model
+- Explain what RAG is, what a vector database does, and when you'd use each
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. What's the difference between an LLM and an AI agent?
+2. When would you use a local model (Ollama) instead of a cloud API? What are the trade-offs?
+3. What is RAG? Give a concrete example of when you'd use it on this project.
+4. What is an embedding, and why does it enable semantic search?

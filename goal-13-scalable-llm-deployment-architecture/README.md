@@ -34,3 +34,24 @@ Design and document a reference architecture for deploying open-source LLMs at s
 - At least one model is live on AKS with documented throughput and cost metrics by end of Month 9.
 - Auto-scaling works correctly: cluster scales down to zero idle nodes, scales up within defined SLA.
 - Operational runbook is complete and validated by a team member who was not involved in the build.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Explain what vLLM does and why it's used over running a model directly
+- Compare cloud inference (Bedrock, Azure AI) vs self-hosted on cost, latency, and data control
+- Design a deployment architecture for a given team use case
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. What is vLLM and what problem does it solve?
+2. What factors determine whether to use cloud inference vs self-hosted? Walk through the decision.
+3. Design a simple deployment architecture for running a 7B parameter model for team code review. What infrastructure do you choose and why?
+4. What is quantization and how does it affect model quality vs hosting cost?

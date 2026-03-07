@@ -34,3 +34,24 @@ Define, document, and enforce cost thresholds and data classification rules for 
 - Zero integrations are found to send PII/PHI to unapproved external LLMs (verified by audit).
 - Cost alerts are active and tested for all LLM-consuming services.
 - Policy is reviewed and signed off by the compliance team.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Estimate the token cost of a given AI operation
+- Identify the main LLM security risks (prompt injection, data exposure, model inversion)
+- Know what data categories must never be sent to a cloud LLM
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. How do you estimate the token cost of an LLM operation? Walk through an example.
+2. What is prompt injection in an agent context? Give an example of how it could affect a CI/CD agent.
+3. What categories of data should never leave your infrastructure and go to a cloud LLM?
+4. What's the trade-off between using GPT-4 vs a local model for a code generation task?

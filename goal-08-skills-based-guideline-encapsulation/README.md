@@ -34,3 +34,24 @@ Package all team guidelines, coding standards, PR review checklists, and archite
 - All 6 skills are published and loadable via `npx openskills read <skill-name>`.
 - AI tools apply the correct standards when a skill is loaded — verified by TPL review of AI output.
 - Every team member has successfully loaded and used at least one skill in a real development session.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Understand the structure of the `@agency/skills` npm package
+- Know how to add a new skill file
+- Be able to load a skill in a session and explain why it's packaged vs committed per-repo
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. What is `@agency/skills`? How is it different from having skill files in `.claude/skills/`?
+2. How do you add a new skill to the package? Walk through the steps.
+3. What's the advantage of publishing skills as an npm package vs committing them to each repo?
+4. Name 3 skills currently in the package and describe what each one does.

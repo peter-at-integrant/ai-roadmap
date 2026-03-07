@@ -59,3 +59,25 @@ The workspace structure is **tool-agnostic** — it uses Git submodules and a VS
 - Tool-specific configuration files for Cursor and Claude Code are present, functional, and serve as reference implementations for onboarding other tools.
 - Developer setup guide is present and reviewed by at least one other team member.
 - All repository access permissions are confirmed working for all team members before sign-off.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Explain what a Git submodule is and why it's used instead of copying repo content
+- Explain what `.code-workspace`, `CLAUDE.md`, and `.cursor/settings.json` each do and why they're separate
+- Explain why multi-root context matters for AI tools working across repos
+- Set up the workspace structure from scratch without AI generating the config files
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. What problem does a multi-repo root setup solve that simply opening each repo separately doesn't?
+2. What is a Git submodule? How does it differ from copying the code into a subfolder?
+3. If a new AI tool joins the team that isn't Cursor or Claude Code, what would you need to add to support it?
+4. What would break if you deleted the `.code-workspace` file? What if you deleted `CLAUDE.md`?

@@ -32,3 +32,24 @@ Integrate Playwright via an MCP server to auto-generate end-to-end test cases fr
 - Generated tests execute successfully in the CI pipeline on every PR.
 - 80% of new UI feature acceptance criteria are covered by auto-generated tests by Week 8.
 - Failing tests block PR merges.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Explain the difference between unit, integration, and E2E tests and where Playwright fits
+- Understand how the MCP server generates tests from acceptance criteria
+- Know how Playwright integrates with GitHub Actions CI and what "blocking the PR" means in practice
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. What's the difference between unit tests, integration tests, and E2E tests? Which does Playwright cover?
+2. How does the Playwright MCP server generate tests? What does it take as input?
+3. Why does a failing Playwright test block a PR merge? What's the risk of not blocking?
+4. You add a new booking confirmation flow. What do you do to make sure it has test coverage?

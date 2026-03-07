@@ -30,3 +30,24 @@ Build a workflow where requirement documents are fed to an AI tool and output st
 - Given a requirements document, an AI tool produces a structured list of work items matching the team template within one session.
 - 80% of generated items are accepted by the PO without restructuring.
 - All generated work items are traceable back to the source requirement in the KB.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Explain what a Claude Code skill is and how it differs from a plain prompt
+- Trace the full flow: requirements doc → JSON work items → GitHub Issues
+- Identify what the automation handles and what still requires human judgment
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. What is a skill in Claude Code? How is it different from a prompt you type directly?
+2. Walk through how a requirements document gets converted to GitHub Issues — what are the steps and tools involved?
+3. What information must each work item contain to be actionable for a developer?
+4. What does the automation get wrong or miss? What would you check manually before importing?

@@ -30,3 +30,24 @@ Document and maintain project architecture, coding standards, tech stack, and bu
 - Every project has an architecture doc and coding standards doc accessible via `AGENTS.md`.
 - Developers report reduced need to manually explain context to AI tools.
 - First-pass PR approval rate for AI-assisted tasks reaches 70% by end of Week 7.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Know the purpose of each doc: `architecture.md`, `coding-standards.md`, `dependencies.md`, `business-context.md`, ADRs
+- Explain why keeping context in files (not prompts) reduces token waste
+- Know when to write a new ADR vs updating an existing doc
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. What's the difference between `architecture.md` and an ADR? When do you write each?
+2. If the API team decides to switch from MediatR to Minimal APIs, which files do you update and why?
+3. How does providing architecture context upfront improve AI-generated code quality?
+4. What goes in `business-context.md` that shouldn't go in `coding-standards.md`?

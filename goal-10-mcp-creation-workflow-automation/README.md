@@ -31,3 +31,24 @@ Each team designs, builds, and deploys a custom MCP server that automates a real
 - Each team has a deployed, functioning MCP server that automates a real workflow.
 - The MCP is invocable from at least one AI tool (Cursor, Claude Code, etc.) without manual steps.
 - At least one previously manual workflow step is eliminated, confirmed by the workflow owner.
+
+---
+
+## Learning Objectives
+
+By the end of this goal, you should be able to:
+
+- Build an MCP server from scratch using the MCP SDK
+- Know when to use MCP vs a skill file vs a standalone script
+- Understand where n8n/Airflow fits in the SDLC automation picture
+
+---
+
+## Self-Assessment
+
+Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
+
+1. When should you build an MCP server instead of writing a skill file?
+2. What are the three components of an MCP tool definition?
+3. Walk through how you'd build an MCP that pulls open GitHub Issues and formats them as a sprint board.
+4. What is n8n and how does it connect AI to business workflows?
