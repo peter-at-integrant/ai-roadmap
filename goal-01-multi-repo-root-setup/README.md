@@ -10,7 +10,7 @@
 ## Prerequisites
 
 Before execution can begin:
-- DevOps must provision read access to all 10 team repositories for the TPL and any contributing developers
+- DevOps must provision read access to all 3 team repositories for the TPL and any contributing developers
 - DevOps contact responsible for access provisioning must be confirmed before Week 1 ends
 - If access is not fully provisioned by start of Week 2, the TPL must surface this as a risk immediately
 
@@ -30,8 +30,8 @@ The workspace structure is **tool-agnostic** — it uses [Git submodules](https:
 
 ## SMART Breakdown
 
-- **Specific:** Set up a root repository using **[Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)** as the primary linking mechanism for all 10 team repositories, combined with a VS Code multi-root workspace file ([`.code-workspace`](https://code.visualstudio.com/docs/editing/workspaces/workspaces#_multiroot-workspaces)). Configure tool-specific AI context files for [Cursor](https://www.cursor.com) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code) as reference implementations. The workspace pattern is designed to work with any AI tool that supports multi-root context.
-- **Measurable:** An AI tool can successfully read files from and propose changes across **all 10 team repositories** in a single session without manual context switching.
+- **Specific:** Set up a root repository using **[Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)** as the primary linking mechanism for all 3 team repositories, combined with a VS Code multi-root workspace file ([`.code-workspace`](https://code.visualstudio.com/docs/editing/workspaces/workspaces#_multiroot-workspaces)). Configure tool-specific AI context files for [Cursor](https://www.cursor.com) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code) as reference implementations. The workspace pattern is designed to work with any AI tool that supports multi-root context.
+- **Measurable:** An AI tool can successfully read files from and propose changes across **all 3 team repositories** in a single session without manual context switching.
 - **Achievable:** Uses existing repo structure; requires only configuration files and workspace setup — no new infrastructure. Repository access provisioning by DevOps is a prerequisite (see above).
 - **Relevant:** Eliminates manual context switching between repos for cross-cutting features, reducing developer handoff delays. Establishes the foundational workspace structure required by every subsequent Phase 0 goal.
 - **Time-bound:** Complete by end of Week 2. Contingent on DevOps provisioning repo access by end of Week 1.
@@ -41,11 +41,11 @@ The workspace structure is **tool-agnostic** — it uses [Git submodules](https:
 ## Deliverables
 
 - [ ] Root repository created and accessible to all team members
-- [ ] All 10 team repositories linked as [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) under `services/`
+- [ ] All 3 team repositories linked as [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) under `services/`
 - [ ] VS Code multi-root workspace file ([`.code-workspace`](https://code.visualstudio.com/docs/editing/workspaces/workspaces#_multiroot-workspaces)) committed to root repo
 - [ ] [Claude Code](https://docs.anthropic.com/en/docs/claude-code) `CLAUDE.md` context file committed to root repo (reference implementation)
 - [ ] [Cursor](https://www.cursor.com) `.cursor/settings.json` context file committed to root repo (reference implementation)
-- [ ] Validated: AI tool reads and proposes changes across all 10 repos in a single session
+- [ ] Validated: AI tool reads and proposes changes across all 3 repos in a single session
 - [ ] Developer setup guide (`docs/workspace-guide.md`) committed and peer-reviewed
 - [ ] **Out of scope — noted:** [MCP](https://modelcontextprotocol.io) server configuration → addressed in Goal 5
 - [ ] **Out of scope — noted:** AGENTS.md content → addressed in Goal 2; workspace is pre-wired to consume it
@@ -54,8 +54,8 @@ The workspace structure is **tool-agnostic** — it uses [Git submodules](https:
 
 ## Acceptance Criteria
 
-- A developer can open the root workspace in any AI tool that supports multi-root context and navigate to any of the 10 linked repositories without leaving the session.
-- An AI tool can read files from and propose changes to **all 10 team repositories** in a single session.
+- A developer can open the root workspace in any AI tool that supports multi-root context and navigate to any of the 3 linked repositories without leaving the session.
+- An AI tool can read files from and propose changes to **all 3 team repositories** in a single session.
 - Tool-specific configuration files for [Cursor](https://www.cursor.com) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code) are present, functional, and serve as reference implementations for onboarding other tools.
 - Developer setup guide is present and reviewed by at least one other team member.
 - All repository access permissions are confirmed working for all team members before sign-off.
