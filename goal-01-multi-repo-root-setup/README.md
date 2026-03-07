@@ -77,7 +77,26 @@ By the end of this goal, you should be able to:
 
 Answer the following questions **in your own words** without AI assistance. Reviewed by EM/TL.
 
-1. What problem does a multi-repo root setup solve that simply opening each repo separately doesn't?
-2. What is a Git submodule? How does it differ from copying the code into a subfolder?
-3. If a new AI tool joins the team that isn't [Cursor](https://www.cursor.com) or [Claude Code](https://docs.anthropic.com/en/docs/claude-code), what would you need to add to support it?
-4. What would break if you deleted the [`.code-workspace`](https://code.visualstudio.com/docs/editing/workspaces/workspaces#_multiroot-workspaces) file? What if you deleted `CLAUDE.md`?
+---
+
+**Q1. What problem does a multi-repo root setup solve that simply opening each repo separately doesn't?**
+
+> _Your answer here_
+
+---
+
+**Q2. What is a [Git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules)? How does it differ from copying the code into a subfolder?**
+
+> _Your answer here_
+
+---
+
+**Q3. If a new AI tool joins the team that isn't [Cursor](https://www.cursor.com) or [Claude Code](https://docs.anthropic.com/en/docs/claude-code), what would you need to add to support it?**
+
+> _Your answer here_
+
+---
+
+**Q4. What would break if you deleted the [`.code-workspace`](https://code.visualstudio.com/docs/editing/workspaces/workspaces#_multiroot-workspaces) file? What if you deleted `CLAUDE.md`?**
+
+> _Your answer here_
