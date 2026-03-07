@@ -2,21 +2,38 @@
 
 **Created:** 2026-03-04
 **Status:** Draft — Phase 0 complete; Phases 1–3 in progress
-**Source:** [integrant-roadmap.md](./integrant-roadmap.md)
-This repo tracks a structured, self-development programme for adopting AI across the full software development lifecycle. It documents 16 SMART goals across 4 progressive phases, with implementation plans, alignment discussions, and a live progress tracker.
 
-The goals are demonstrated against the [Agency workspace](https://github.com/peter-at-integrant/agency-workspace) — a multi-repo band & venue booking platform ([project brief](https://github.com/peter-at-integrant/agency-workspace/blob/main/agency-project-brief.md)).
+A structured self-development programme for adopting AI across the full software development lifecycle — 16 SMART goals across 4 progressive phases, demonstrated against the [Agency](https://github.com/peter-at-integrant/agency-workspace/blob/main/agency-project-brief.md) band & venue booking platform.
 
-**Progress:** [Implementation Progress](./progress.md)
-**Achievements:** [What was built + how to use it](./achievements.md)
-**SDLC Coverage:** [Combined Coverage Overview](./sdlc-coverage-overview.md)
-**Discussions:** [EM / TL Alignment Discussions](./discussions/README.md)
+## Document Map
 
-## Overview
+Everything in this repo follows a linear flow from plan → execution → outcomes:
 
-Each goal has its own directory containing:
-- The SMART goal definition (`README.md` inside the folder)
-- An **implementation plan** (`implementation-plan.md`) — a concrete technical proposal demonstrating how to achieve the goal
+```
+integrant-roadmap.md
+│  The original plan — 4 phases, SDLC objectives, training outline.
+│  Start here.
+│
+├── discussions/
+│     EM/TL reviews of the roadmap: gaps, demo project selection,
+│     goal-by-goal alignment. Refines and ratifies the plan.
+│
+├── sdlc-coverage-overview.md
+│     Maps the 9 SDLC steps to goals across all 4 phases.
+│     Answers "does the plan cover everything?"
+│
+├── goal-NN-*/README.md  (× 16)
+│     SMART goal definitions derived from the roadmap.
+│
+├── goal-NN-*/implementation-plan.md  (× 16)
+│     Concrete technical proposal per goal — how to achieve it.
+│
+├── progress.md
+│     Live tracker — goals done vs pending, deliverables per goal.
+│
+└── achievements.md  →  goal-NN-*/achievements.md
+      What was actually built, how to use it, how to verify it.
+```
 
 ## Goal Index
 
