@@ -1,6 +1,6 @@
 # Implementation Plan — Goal 8: Skills-Based Guideline Encapsulation
 
-**Goal:** Package all Agency coding standards and team guidelines as installable OpenSkills — portable across AI tools and team members.
+**Goal:** Package all Agency coding standards and team guidelines as installable skills — compatible with Claude Code and Cursor, portable across team members.
 **Demo Project:** [Agency — Band & Venue Booking Platform](../agency-project-brief.md)
 **Owner:** TPL
 **Target:** Week 6
@@ -9,7 +9,9 @@
 
 ## Approach
 
-Create an `agency-skills` npm package containing 6 Markdown skill files — one per guideline area. Published to GitHub Packages. Installed via `npx @agency/skills read <skill-name>`. Claude Code auto-loads from `.claude/skills/`; Cursor picks them up via `.cursorrules`. Content is drawn directly from the Agency project's architecture, stack, and conventions.
+Create an `agency-skills` npm package containing 6 skill directories — one per guideline area. Published to GitHub Packages. Installed via `npx @agency/skills install` which copies skill directories into `.claude/skills/`. Both Claude Code and Cursor auto-load skills from `.claude/skills/` — one install, both tools. Cursor also reads `.cursorrules` (symlinked from `AGENTS.md`, established in Goal 2) for project-level rules. Content is drawn directly from the Agency project's architecture, stack, and conventions.
+
+> **Skill format:** Each skill must be a directory containing a `SKILL.md` file with YAML frontmatter (`name` + `description`). A flat `.md` file will not be registered as a slash command by either tool.
 
 ---
 
@@ -30,12 +32,18 @@ Structure:
 agency-workspace/
   agency-skills/
     skills/
-      dev-coding-standards.md
-      pr-review-process.md
-      architecture-patterns.md
-      work-item-templates.md
-      testing-standards.md
-      documentation-requirements.md
+      dev-coding-standards/
+        SKILL.md          ← name + description frontmatter required
+      pr-review-process/
+        SKILL.md
+      architecture-patterns/
+        SKILL.md
+      work-item-templates/
+        SKILL.md
+      testing-standards/
+        SKILL.md
+      documentation-requirements/
+        SKILL.md
     bin/
       skills.js           ← CLI entry point
     package.json
@@ -43,9 +51,14 @@ agency-workspace/
 
 ### Step 2 — Skill: Development Coding Standards
 
-Create `skills/dev-coding-standards.md`:
+Create `skills/dev-coding-standards/SKILL.md`:
 
 ```markdown
+---
+name: dev-coding-standards
+description: This skill should be used when writing or reviewing code for the Agency platform to ensure it follows team coding standards across agency-gig-api, agency-gig-web, and agency-gig-ui.
+---
+
 # Skill: Agency Development Coding Standards
 
 ## agency-gig-api (.NET 9)
@@ -76,9 +89,14 @@ Create `skills/dev-coding-standards.md`:
 
 ### Step 3 — Skill: PR Review Process
 
-Create `skills/pr-review-process.md`:
+Create `skills/pr-review-process/SKILL.md`:
 
 ```markdown
+---
+name: pr-review-process
+description: This skill should be used when reviewing a pull request for the Agency platform to ensure it meets team quality, architecture, and documentation standards.
+---
+
 # Skill: Agency PR Review Process
 
 ## Reviewer Checklist
@@ -123,9 +141,14 @@ Create `skills/pr-review-process.md`:
 
 ### Step 4 — Skill: Architecture Patterns
 
-Create `skills/architecture-patterns.md`:
+Create `skills/architecture-patterns/SKILL.md`:
 
 ```markdown
+---
+name: architecture-patterns
+description: This skill should be used when designing or reviewing Agency platform architecture to ensure it follows Clean Architecture, CQRS, and App Router patterns.
+---
+
 # Skill: Agency Architecture Patterns
 
 ## agency-gig-api — Clean Architecture
@@ -168,9 +191,14 @@ Never update Status directly — always through domain methods.
 
 ### Step 5 — Skill: Work Item Templates
 
-Create `skills/work-item-templates.md`:
+Create `skills/work-item-templates/SKILL.md`:
 
 ```markdown
+---
+name: work-item-templates
+description: This skill should be used when creating user stories, tasks, or bug reports for the Agency platform to ensure they follow the team work item template.
+---
+
 # Skill: Agency Work Item Templates
 
 ## User Story
@@ -203,9 +231,14 @@ Create `skills/work-item-templates.md`:
 
 ### Step 6 — Skill: Testing Standards
 
-Create `skills/testing-standards.md`:
+Create `skills/testing-standards/SKILL.md`:
 
 ```markdown
+---
+name: testing-standards
+description: This skill should be used when writing or reviewing tests for the Agency platform to ensure they follow team unit, integration, and E2E testing standards.
+---
+
 # Skill: Agency Testing Standards
 
 ## Test Naming
@@ -241,9 +274,14 @@ e.g. `Confirm_WhenAlreadyConfirmed_ReturnsFailure`
 
 ### Step 7 — Skill: Documentation Requirements
 
-Create `skills/documentation-requirements.md`:
+Create `skills/documentation-requirements/SKILL.md`:
 
 ```markdown
+---
+name: documentation-requirements
+description: This skill should be used when writing PRs, ADRs, or updating AGENTS.md for the Agency platform to ensure documentation requirements are met.
+---
+
 # Skill: Agency Documentation Requirements
 
 ## Every PR must include
@@ -281,15 +319,32 @@ const fs   = require("fs");
 const path = require("path");
 
 const [,, command, skillName] = process.argv;
+const skillsDir = path.join(__dirname, "../skills");
+
+if (command === "install") {
+  // Copy all skill directories into .claude/skills/
+  const dest = path.join(process.cwd(), ".claude/skills");
+  fs.mkdirSync(dest, { recursive: true });
+  for (const name of fs.readdirSync(skillsDir)) {
+    const src = path.join(skillsDir, name, "SKILL.md");
+    if (!fs.existsSync(src)) continue;
+    fs.mkdirSync(path.join(dest, name), { recursive: true });
+    fs.copyFileSync(src, path.join(dest, name, "SKILL.md"));
+    console.log(`✓ Installed skill: ${name}`);
+  }
+  console.log("\nSkills installed to .claude/skills/ — recognized by Claude Code and Cursor.");
+  process.exit(0);
+}
 
 if (command !== "read" || !skillName) {
-  console.log("Usage: npx @agency/skills read <skill-name>");
-  console.log("Skills:", fs.readdirSync(path.join(__dirname, "../skills"))
-    .map(f => f.replace(".md", "")).join(", "));
+  console.log("Usage:");
+  console.log("  npx @agency/skills install          — install all skills to .claude/skills/");
+  console.log("  npx @agency/skills read <skill-name> — print skill content");
+  console.log("Skills:", fs.readdirSync(skillsDir).join(", "));
   process.exit(1);
 }
 
-const filePath = path.join(__dirname, "../skills", `${skillName}.md`);
+const filePath = path.join(skillsDir, skillName, "SKILL.md");
 if (!fs.existsSync(filePath)) {
   console.error(`Skill not found: ${skillName}`);
   process.exit(1);
@@ -313,12 +368,11 @@ Add to `agency-gig-api`, `agency-gig-web`, `agency-gig-ui` AGENTS.md:
 
 ```markdown
 ## Skills
-Load Agency guidelines with:
-```
-npx @agency/skills read dev-coding-standards
-npx @agency/skills read pr-review-process
-npx @agency/skills read architecture-patterns
-```
+Agency skills are installed in `.claude/skills/` and auto-loaded by Claude Code and Cursor.
+To reinstall or update: `npx @agency/skills install`
+
+Available skills: `/dev-coding-standards`, `/pr-review-process`, `/architecture-patterns`,
+`/work-item-templates`, `/testing-standards`, `/documentation-requirements`
 ```
 
 ### Step 10 — Team walkthrough
@@ -335,10 +389,10 @@ npx @agency/skills read architecture-patterns
 
 | Tool | Purpose |
 |---|---|
-| Markdown skill files | Content — readable by any AI tool |
+| Skill directories (`name/SKILL.md`) | Required format — directory + YAML frontmatter |
 | npm (`@agency/skills`) | Versioned, installable skill registry |
-| Claude Code `.claude/skills/` | Auto-loaded each session |
-| Cursor `.cursorrules` | Cursor-compatible skill loading |
+| `.claude/skills/` | Auto-loaded by both Claude Code and Cursor each session |
+| `.cursorrules` | Cursor project rules — symlinked from `AGENTS.md` (Goal 2) |
 | GitHub Packages | Private registry hosting |
 
 ---

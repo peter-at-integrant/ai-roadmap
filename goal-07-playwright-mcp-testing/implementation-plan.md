@@ -163,9 +163,16 @@ main();
 
 ### Step 4 — Claude Code skill
 
-Create `.claude/skills/generate-tests.md` in `agency-workspace`:
+Create `.claude/skills/generate-tests/SKILL.md` in `agency-workspace`:
+
+> **Structure note:** Skills must be a directory containing a `SKILL.md` file with YAML frontmatter (`name` + `description`). A flat `.md` file will not be registered as a slash command.
 
 ```markdown
+---
+name: generate-tests
+description: This skill should be used when the user wants to generate Playwright E2E tests for Agency platform features.
+---
+
 # Skill: Generate Playwright Tests for Agency
 
 ## Usage

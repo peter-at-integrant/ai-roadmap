@@ -90,9 +90,16 @@ Same structure for `agency-gig-web` (use `"githubRepo": "agency-gig-web"`) and `
 
 ### Step 4 — Claude Code skill
 
-Create `.claude/skills/branch-and-pr.md` in `agency-workspace`:
+Create `.claude/skills/branch-and-pr/SKILL.md` in `agency-workspace`:
+
+> **Structure note:** Skills must be a directory containing a `SKILL.md` file with YAML frontmatter (`name` + `description`). A flat `.md` file will not be registered as a slash command.
 
 ```markdown
+---
+name: branch-and-pr
+description: This skill should be used when the user wants to create a branch and open a pull request from a GitHub issue number in an Agency repo.
+---
+
 # Skill: Branch and PR Creation
 
 ## Usage

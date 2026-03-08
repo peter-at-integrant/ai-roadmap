@@ -45,9 +45,16 @@ Create `tools/templates/work-item-template.md` in `agency-workspace`:
 
 ### Step 2 — Create the Claude Code skill
 
-Create `.claude/skills/create-work-items.md` in `agency-workspace`:
+Create `.claude/skills/create-work-items/SKILL.md` in `agency-workspace`:
+
+> **Structure note:** Skills must be a directory containing a `SKILL.md` file with YAML frontmatter (`name` + `description`). A flat `.md` file will not be registered as a slash command.
 
 ```markdown
+---
+name: create-work-items
+description: This skill should be used when the user wants to generate structured GitHub Issues from a requirements document for the Agency platform.
+---
+
 # Skill: Create Work Items from Requirements
 
 Given a requirements document for the Agency platform, produce structured
