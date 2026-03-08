@@ -10,8 +10,8 @@ Create and maintain an `AGENTS.md` file at the root of each repository that docu
 
 ## SMART Breakdown
 
-- **Specific:** Write and commit an `AGENTS.md` to all 10 project repositories, covering coding standards, architecture overview, tech stack, and team workflows.
-- **Measurable:** All 10 projects have a populated `AGENTS.md`; AI tools reference it without additional prompting in 90% of sessions.
+- **Specific:** Write and commit an `AGENTS.md` to all 3 project repositories, covering coding standards, architecture overview, tech stack, and team workflows.
+- **Measurable:** All 3 projects have a populated `AGENTS.md`; AI tools reference it without additional prompting in 90% of sessions.
 - **Achievable:** Documentation effort only — no new tooling required. Content is drawn from existing architecture docs and team knowledge.
 - **Relevant:** Reduces repeated context setup per AI session and ensures consistent output across tools and team members.
 - **Time-bound:** Initial versions complete by end of Week 2; reviewed and refined by end of Week 4.
@@ -19,7 +19,7 @@ Create and maintain an `AGENTS.md` file at the root of each repository that docu
 ## Deliverables
 
 - [ ] `AGENTS.md` template defined and shared with all teams
-- [ ] `AGENTS.md` committed to all 10 project repositories
+- [ ] `AGENTS.md` committed to all 3 project repositories
 - [ ] Peer review of each `AGENTS.md` by at least one team member
 - [ ] AI tool validation: each file loaded and used successfully in a session
 - [ ] Maintenance process defined (who updates it, when, and how)

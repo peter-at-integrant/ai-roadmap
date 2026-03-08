@@ -56,22 +56,22 @@ integrant-roadmap.md
 
 | # | Goal | Owner | Target |
 |---|---|---|---|
-| 11 | [LLM Fundamentals and Local Model Exploration](./goal-09-llm-fundamentals-local-models/) | All Engineers | Month 2 |
-| 12 | [MCP Creation and Workflow Automation](./goal-10-mcp-creation-workflow-automation/) | Dev / DevOps | Month 3 |
+| 11 | [LLM Fundamentals and Local Model Exploration](./goal-11-llm-fundamentals-local-models/) | All Engineers | Month 2 |
+| 12 | [MCP Creation and Workflow Automation](./goal-12-mcp-creation-workflow-automation/) | Dev / DevOps | Month 3 |
 
 ### Phase 3: Level 2 — AI Agent Engineer
 
 | # | Goal | Owner | Target |
 |---|---|---|---|
-| 13 | [Autonomous Multi-Step Agent Development](./goal-11-autonomous-agent-development/) | Dev | Month 5 |
-| 14 | [Cost and Security Awareness for LLM Usage](./goal-12-cost-security-awareness/) | TPL / Security | Month 5 |
+| 13 | [Autonomous Multi-Step Agent Development](./goal-13-autonomous-agent-development/) | Dev | Month 5 |
+| 14 | [Cost and Security Awareness for LLM Usage](./goal-14-cost-security-awareness/) | TPL / Security | Month 5 |
 
 ### Phase 4: Level 3 — AI Architect
 
 | # | Goal | Owner | Target |
 |---|---|---|---|
-| 15 | [Scalable LLM Deployment Architecture](./goal-13-scalable-llm-deployment-architecture/) | Architect | Month 9 |
-| 16 | [Agent Security and Learning Mechanisms](./goal-14-agent-security-learning-mechanisms/) | Architect / Security | Month 9 |
+| 15 | [Scalable LLM Deployment Architecture](./goal-15-scalable-llm-deployment-architecture/) | Architect | Month 9 |
+| 16 | [Agent Security and Learning Mechanisms](./goal-16-agent-security-learning-mechanisms/) | Architect / Security | Month 9 |
 
 ## Related Repos
 
