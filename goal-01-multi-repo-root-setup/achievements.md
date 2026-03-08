@@ -23,7 +23,7 @@
 
 ```bash
 # Clone workspace with all service repos
-git clone --recurse-submodules git@github-integrant:peter-at-integrant/agency-workspace.git
+git clone --recurse-submodules git@github.com:peter-at-integrant/agency-workspace.git
 cd agency-workspace
 
 # Open multi-root workspace in VS Code

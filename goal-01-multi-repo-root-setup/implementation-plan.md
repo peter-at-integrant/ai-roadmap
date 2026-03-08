@@ -20,15 +20,15 @@ Use a **Git workspace repository** (`agency-workspace`) with submodules as the s
 ```bash
 mkdir agency-workspace && cd agency-workspace
 git init
-git remote add origin git@github-integrant:peter-at-integrant/agency-workspace.git
+git remote add origin git@github.com:peter-at-integrant/agency-workspace.git
 ```
 
 ### Step 2 — Add all three Agency repos as submodules
 
 ```bash
-git submodule add git@github-integrant:peter-at-integrant/agency-gig-api.git services/agency-gig-api
-git submodule add git@github-integrant:peter-at-integrant/agency-gig-web.git services/agency-gig-web
-git submodule add git@github-integrant:peter-at-integrant/agency-gig-ui.git  services/agency-gig-ui
+git submodule add git@github.com:peter-at-integrant/agency-gig-api.git services/agency-gig-api
+git submodule add git@github.com:peter-at-integrant/agency-gig-web.git services/agency-gig-web
+git submodule add git@github.com:peter-at-integrant/agency-gig-ui.git  services/agency-gig-ui
 git submodule update --init --recursive
 ```
 
@@ -125,7 +125,7 @@ Create `docs/workspace-guide.md`:
 # Agency Workspace Setup
 
 ## Clone
-git clone --recurse-submodules git@github-integrant:peter-at-integrant/agency-workspace.git
+git clone --recurse-submodules git@github.com:peter-at-integrant/agency-workspace.git
 
 ## Open in VS Code
 code agency.code-workspace
